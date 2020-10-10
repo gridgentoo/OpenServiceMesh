@@ -1,5 +1,13 @@
 # Open Service Mesh (OSM)
 
+Open Service Mesh архитектурно базируется на прокси Envoy и реализует go-control-plane xDS v3 API этого проекта.  
+
+https://github.com/envoyproxy/go-control-plane
+
+Однако, несмотря на то, что Envoy входит в поставку OSM по умолчанию, использование стандартных интерфейсов позволяет интегрировать его и с другими реверсными прокси (совместимыми с xDS). Безопасность обеспечивается автоматическим mTLS для взаимодействия сервисов.  
+
+Open Service Mesh образуется 5 компонентами:
+
 [![build](https://github.com/openservicemesh/osm/workflows/Go/badge.svg)](https://github.com/openservicemesh/osm/actions?query=workflow%3AGo)
 [![report](https://goreportcard.com/badge/github.com/openservicemesh/osm)](https://goreportcard.com/report/github.com/openservicemesh/osm)
 [![codecov](https://codecov.io/gh/openservicemesh/osm/branch/main/graph/badge.svg)](https://codecov.io/gh/openservicemesh/osm)
