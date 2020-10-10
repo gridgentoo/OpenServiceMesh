@@ -1,3 +1,9 @@
+[![build](https://github.com/openservicemesh/osm/workflows/Go/badge.svg)](https://github.com/openservicemesh/osm/actions?query=workflow%3AGo)
+[![report](https://goreportcard.com/badge/github.com/openservicemesh/osm)](https://goreportcard.com/report/github.com/openservicemesh/osm)
+[![codecov](https://codecov.io/gh/openservicemesh/osm/branch/main/graph/badge.svg)](https://codecov.io/gh/openservicemesh/osm)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/openservicemesh/osm/blob/main/LICENSE)
+[![release](https://img.shields.io/github/release/openservicemesh/osm/all.svg)](https://github.com/openservicemesh/osm/releases)
+
 # Open Service Mesh (OSM)
 
 Open Service Mesh архитектурно базируется на прокси Envoy и реализует go-control-plane xDS v3 API этого проекта.  
@@ -8,11 +14,15 @@ https://github.com/envoyproxy/go-control-plane
 
 Open Service Mesh образуется 5 компонентами:
 
-[![build](https://github.com/openservicemesh/osm/workflows/Go/badge.svg)](https://github.com/openservicemesh/osm/actions?query=workflow%3AGo)
-[![report](https://goreportcard.com/badge/github.com/openservicemesh/osm)](https://goreportcard.com/report/github.com/openservicemesh/osm)
-[![codecov](https://codecov.io/gh/openservicemesh/osm/branch/main/graph/badge.svg)](https://codecov.io/gh/openservicemesh/osm)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/openservicemesh/osm/blob/main/LICENSE)
-[![release](https://img.shields.io/github/release/openservicemesh/osm/all.svg)](https://github.com/openservicemesh/osm/releases)
+
+![alt text](https://hsto.org/webt/ut/l_/lu/utl_luyx1qzgv58hk7_7ee1se6c.png) 
+
+* **Proxy control plane** обрабатывает gRPC-соединения от sidecar-прокси service mesh'а;
+* **Certificate manager** обеспечивает выпуск сертификатов и управление ими (возможно использование внешних решений для этих задач);
+* **Endpoints providers** отвечают за получение IP-адресов всех платформ, участвующих во взаимодействии (таковыми могут являться кластеры Kubernetes, машины on-prem, виртуальные машины облачных провайдеров);
+* **Mesh specification** — обёртка вокруг спецификации SMI на Go SDK, обеспечивающая простые методы получения ресурсов по этой спецификации, абстрагируясь от специфики устройства кластера и хранилища;
+* **Mesh catalog** — центральное звено service mesh'а, собирающее данные со всех других компонентов и передающее конфигурацию для proxy control plane.
+
 
 Open Service Mesh (OSM) is a lightweight, extensible, Cloud Native [service mesh][1] that allows users to uniformly manage, secure, and get out-of-the-box observability features for highly dynamic microservice environments.
 
