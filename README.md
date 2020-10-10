@@ -23,6 +23,13 @@ Open Service Mesh образуется 5 компонентами:
 * **Mesh specification** — обёртка вокруг спецификации SMI на Go SDK, обеспечивающая простые методы получения ресурсов по этой спецификации, абстрагируясь от специфики устройства кластера и хранилища;
 * **Mesh catalog** — центральное звено service mesh'а, собирающее данные со всех других компонентов и передающее конфигурацию для proxy control plane.
 
+Более подробное представление об архитектуре OSM можно получить из этой расширенной схемы:
+
+![alt text](https://hsto.org/webt/op/yh/9b/opyh9b_pqyf9ezoi9rjrrtw9xsu.png)
+
+… более подробная документация на английском DESIGN.md.  
+
+https://github.com/gridgentoo/OpenServiceMesh/blob/main/DESIGN.md  
 
 Open Service Mesh (OSM) is a lightweight, extensible, Cloud Native [service mesh][1] that allows users to uniformly manage, secure, and get out-of-the-box observability features for highly dynamic microservice environments.
 
