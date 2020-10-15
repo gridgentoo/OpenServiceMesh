@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/openservicemesh/osm/blob/main/LICENSE)
 [![release](https://img.shields.io/github/release/openservicemesh/osm/all.svg)](https://github.com/openservicemesh/osm/releases)
 
-# Open Service Mesh (OSM)
+### Open Service Mesh (OSM)
 
 Open Service Mesh архитектурно базируется на прокси Envoy и реализует go-control-plane xDS v3 API этого проекта.  
 
